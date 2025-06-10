@@ -2,7 +2,6 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-
 import path from "path";
 
 import { connectDB } from "./lib/db.js";
@@ -27,6 +26,11 @@ app.use(
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
+
+// ✅ Add this simple root route for Render sanity check
+app.get('/', (req, res) => {
+  res.send('Backend is running'); // Optional: res.json({ status: 'ok' });
+});
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
