@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://chatstoic.vercel.app"],
+    origin:  "https://chatstoic.vercel.app",
     credentials: true,
   })
 );
