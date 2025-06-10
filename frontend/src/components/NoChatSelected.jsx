@@ -11,15 +11,20 @@ const NoChatSelected = () => {
               className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center
              justify-center animate-bounce"
             >
+              <img
+                src="/chatstoiclogo.svg"
+                alt="ChatStoic Logo"
+                className="w-full h-full object-cover"
+                />
               <MessageSquare className="w-8 h-8 text-primary " />
             </div>
           </div>
         </div>
 
         {/* Welcome Text */}
-        <h2 className="text-2xl font-bold">Welcome to Chatty!</h2>
+        <h2 className="text-2xl font-bold">Welcome to ChatStoic!</h2>
         <p className="text-base-content/60">
-          Select a conversation from the sidebar to start chatting
+          Choose who you're going to text from the sidebar!
         </p>
       </div>
     </div>
